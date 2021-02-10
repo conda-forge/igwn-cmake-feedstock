@@ -6,7 +6,7 @@ mkdir -p _build
 pushd _build
 
 # configure
-cmake \
+cmake ${CMAKE_ARGS} \
 	-DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo \
 	-DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
 	${SRC_DIR} \
