@@ -22,7 +22,9 @@ test:
   requires:
     - pkg-config
   commands:
-    - pkg-config --print-errors --modversion igwncmake
+    - pkg-config --print-errors --exact-version "{{ version }}" igwncmake
+    - test -f ${PREFIX}/share/igwn-cmake/cmake/Modules/IGWNCMakeConfig.cmake  # [unix]
+    - if not exist %LIBRARY_PREFIX%\\share\\igwn-cmake\\cmake\\Modules\\IGWNCMakeConfig.cmake exit 1  # [win]
 
 about:
   home: https://git.ligo.org/ldastools/igwn-cmake
