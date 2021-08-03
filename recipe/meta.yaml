@@ -1,5 +1,5 @@
 {% set name = "igwn-cmake" %}
-{% set version = "1.2.2" %}
+{% set version = "1.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: http://software.igwn.org/sources/source/{{ name }}-{{ version }}.tar.gz
-  sha256: f9d80884b24ae64c2a6f49e2852fd9806bd074536a913368a78c9b06122ff95f
+  sha256: e1235527834d3bdca262b73ab5ac3a2057eaa279a1a1fd9609b79cdcfdec858b
 
 build:
   number: 0
